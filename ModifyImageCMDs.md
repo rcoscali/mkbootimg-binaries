@@ -8,11 +8,11 @@
    file
 
 These commands are available from:
-  . https://github.com/osm0sis/mkbootimg.git
+  - https://github.com/osm0sis/mkbootimg.git
 Clone the repository and build with make. You'll get 
 the binaries.
 Some pre compiled are available for ubuntu 16.04 amd64 at:
-  . https://github.com/rcoscali/mkbootimg-binaries
+  - https://github.com/rcoscali/mkbootimg-binaries
 
 ### From a factory image (angler-nmf26f-factory-ef607244.zip for ex)
 $ mkdir angler-nmf26f-factory-ef607244

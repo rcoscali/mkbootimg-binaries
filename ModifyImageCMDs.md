@@ -9,12 +9,15 @@
 
 These commands are available from:
   - https://github.com/osm0sis/mkbootimg.git
+
 Clone the repository and build with make. You'll get 
 the binaries.
+
 Some pre compiled are available for ubuntu 16.04 amd64 at:
   - https://github.com/rcoscali/mkbootimg-binaries
 
 ### From a factory image (angler-nmf26f-factory-ef607244.zip for ex)
+**code**
 $ mkdir angler-nmf26f-factory-ef607244
 $ cd angler-nmf26f-factory-ef607244
 $ unzip ../angler-nmf26f-factory-ef607244.zip
@@ -26,6 +29,7 @@ Archive:  ../angler-nmf26f-factory-ef607244.zip
   inflating: angler-nmf26f/flash-all.sh  
   inflating: angler-nmf26f/radio-angler-angler-03.78.img  
   inflating: angler-nmf26f/flash-base.sh  
+**code**
 ### Extract images
 $ cd angler-nmf26f
 $ mkdir image-angler-nmf26f

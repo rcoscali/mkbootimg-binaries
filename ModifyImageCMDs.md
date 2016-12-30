@@ -48,7 +48,9 @@ Archive:  ../image-angler-nmf26f.zip
 ```
 
 ## boot.img & system.img
+
 Here are the boot.img & system.img images
+
 Unpack boot image
 
 ```

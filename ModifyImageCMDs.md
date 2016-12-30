@@ -17,7 +17,7 @@ Some pre compiled are available for ubuntu 16.04 amd64 at:
   * https://github.com/rcoscali/mkbootimg-binaries
 
 ### From a factory image (angler-nmf26f-factory-ef607244.zip for ex)
-```bash
+```console
 $ mkdir angler-nmf26f-factory-ef607244
 $ cd angler-nmf26f-factory-ef607244
 $ unzip ../angler-nmf26f-factory-ef607244.zip
@@ -32,7 +32,7 @@ Archive:  ../angler-nmf26f-factory-ef607244.zip
 ```
 
 ### Extract images
-```bash
+```console
 $ cd angler-nmf26f
 $ mkdir image-angler-nmf26f
 $ cd image-angler-nmf26f
@@ -53,7 +53,7 @@ Here are the boot.img & system.img images
 
 Unpack boot image
 
-```bash
+```console
 $ mkdir boot
 $ unpackbootimg -i boot.img -o boot
 BOARD_KERNEL_CMDLINE androidboot.hardware=angler androidboot.console=ttyHSL0 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-3 no_console_suspend buildvariant=user
@@ -69,12 +69,12 @@ $ cd boot
 ```
 
 ### Uncompress ramdisk cpio image
-```bash
+```console
 $ gzip -dc boot.img-ramdisk.gz > boot.img-ramdisk.cpio
 ```
 
 ### Extract ramdisk cpio image
-```bash
+```console
 $ mkdir boot.img-ramdisk
 $ cd boot.img-ramdisk
 $ cat ../boot.img-ramdisk.cpio | cpio -i
@@ -84,7 +84,7 @@ $ cat ../boot.img-ramdisk.cpio | cpio -i
 Changed properties to allow debuggable and root adb
 and also to remove the recovery patching mechanism (install-recovery.sh) service 
 
-```bash
+```console
 $ find . -print0 | cpio -o0a -H newc -R root.root -O ../boot.img-ramdisk2.cpio
 $ cd ..
 $ gzip -c9 boot.img-ramdisk2.cpio > boot.img-ramdisk2.gz
@@ -92,9 +92,9 @@ $ mkbootimg --kernel boot.img-zImage --ramdisk boot.img-ramdisk2.gz --cmdline "a
 ```
 
 ### Then flash it
-```bash
+```console
 $ cd ..
 $ fastboot flash boot boot2.img
 $ fastboot reboot
-```
+*```
 

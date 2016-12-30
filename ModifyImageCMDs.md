@@ -96,5 +96,10 @@ $ mkbootimg --kernel boot.img-zImage --ramdisk boot.img-ramdisk2.gz --cmdline "a
 $ cd ..
 $ fastboot flash boot boot2.img
 $ fastboot reboot
-*```
+```
 
+Here it is !
+I'll add, later, another toturial for handling system.img, vendor.img & recovery.img images. Stay tuned :-)
+
+
+##                R&eacute;mi
